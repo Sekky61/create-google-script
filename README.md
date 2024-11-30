@@ -1,16 +1,20 @@
 # Google Script template
 
 My starter template for a Google Script project.
-It uses typescript and clasp.
+It uses clasp and bun.
+
+It supports:
+- Typescript
+- npm packages
+- Easy deployment with versions and bundling
 
 ## Get Started
 
 Clone the repository and that is it.
-
-To install dependencies, run `bun install`.
-To run tests, type `bun test`.
-
-You may wish to change the license.
+Bun makes this very easy with [bun create](https://bun.sh/docs/cli/bun-create):
+```bash
+bun create Sekky61/create-google-script mydir
+```
 
 ## Pushing project
 
@@ -23,3 +27,17 @@ This creates a `.clasp.json` file with the info. You may not want to commit it, 
 Now with the project paired, `bun run push` or `bun run watch` will update the project on google cloud.
 
 `bun run deploy -- "description"`
+
+## Tips
+
+To run tests, type `bun test`.
+See more in the [bun test docs](https://bun.sh/docs/cli/test).
+
+You may wish to change the license.
+
+## Disclaimer
+
+DISCLAIMER: This script is not affiliated with, endorsed by, or officially supported by Google.
+It is an independent tool created for managing Apps Script deployments using clasp.
+Use it at your own risk, and refer to official Google documentation for guidance on Apps Script and clasp.
+
