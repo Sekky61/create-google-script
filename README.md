@@ -3,19 +3,14 @@
 My starter template for a Google Script project.
 It uses typescript and clasp.
 
-## Instalation
+## Get Started
 
-To install dependencies:
+Clone the repository and that is it.
 
-```bash
-bun install
-```
+To install dependencies, run `bun install`.
+To run tests, type `bun test`.
 
-To run tests:
-
-```bash
-bun test
-```
+You may wish to change the license.
 
 ## Pushing project
 
