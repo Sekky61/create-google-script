@@ -1,0 +1,24 @@
+{
+  "name": "google-script-template",
+  "description": "Google Apps Script template",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "login": "clasp login",
+    "help": "clasp create --help",
+    "clone": "clasp clone",
+    "push": "clasp push",
+    "pull": "clasp pull",
+    "open": "clasp open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/bun": "latest",
+    "@types/google-apps-script": "^1.0.86"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
