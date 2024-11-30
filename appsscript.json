@@ -1,5 +1,6 @@
 {
   "timeZone": "Europe/Prague",
+  "rootDir": "out/",
   "dependencies": {
   },
   "exceptionLogging": "STACKDRIVER",

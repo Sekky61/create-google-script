@@ -1,5 +1,5 @@
 **/**
 !build/main.js
-!index.ts
+!out/**
 !appsscript.json
 

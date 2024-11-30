@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
 
 import { $ } from "bun";
+import {bundle} from "./bundle";
 
 const claspCmd = "./node_modules/.bin/clasp"; // local clasp path
 
@@ -26,6 +27,9 @@ function log(message: string) {
 
 (async () => {
   const description = process.argv[2] || "auto-deployed";
+  log(`bundling...`);
+  await bundle();
+  log(`bundled`);
   log(`pushing changes...`);
   await pushCode();
   log(`pushed changes`);
