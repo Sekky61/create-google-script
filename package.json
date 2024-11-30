@@ -4,6 +4,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
+    "create": "clasp create",
     "login": "clasp login",
     "help": "clasp create --help",
     "clone": "clasp clone",
@@ -11,6 +12,7 @@
     "watch": "clasp push --watch",
     "pull": "clasp pull",
     "open": "clasp open",
+    "deploy": "bun deploy.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
