@@ -4,6 +4,8 @@
     "module": "index.ts",
     "type": "module",
     "scripts": {
+        "check": "biome check --fix",
+        "check:unsafe": "biome check --fix --unsafe",
         "format": "biome format --write",
         "lint": "biome lint --write",
         "lint:unsafe": "biome lint --write --unsafe",

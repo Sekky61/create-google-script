@@ -38,6 +38,8 @@ You may wish to change the license.
 
 Globals like `console`, `Session` and `Blob` are documented [here](https://developers.google.com/apps-script/reference/base).
 
+Enabling advanced services modifies the appsscript.json file on script.google.com. After enabling an advanced service in the UI, copy the appsscript.json file from script.google.com into your editor to use the advanced services in your project.
+
 ## Disclaimer
 
 DISCLAIMER: This script is not affiliated with, endorsed by, or officially supported by Google.
