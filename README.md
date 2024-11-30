@@ -7,6 +7,7 @@ It supports:
 - Typescript
 - npm packages
 - Easy deployment with versions and bundling
+- lint with Biome
 
 ## Get Started
 
@@ -34,6 +35,8 @@ To run tests, type `bun test`.
 See more in the [bun test docs](https://bun.sh/docs/cli/test).
 
 You may wish to change the license.
+
+Globals like `console`, `Session` and `Blob` are documented [here](https://developers.google.com/apps-script/reference/base).
 
 ## Disclaimer
 

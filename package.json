@@ -4,6 +4,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
+    "format": "biome format --write",
+
     "create": "clasp create",
     "login": "clasp login",
     "help": "clasp create --help",
@@ -13,11 +15,11 @@
     "pull": "clasp pull",
     "open": "clasp open",
     "deploy": "bun deploy.ts",
-    "bundle": "bun bundle.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "bun bundle.ts"
   },
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@google/clasp": "^2.4.2",
     "@types/bun": "latest",
     "@types/google-apps-script": "^1.0.86",
