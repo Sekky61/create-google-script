@@ -5,6 +5,8 @@
     "type": "module",
     "scripts": {
         "format": "biome format --write",
+        "lint": "biome lint --write",
+        "lint:unsafe": "biome lint --write --unsafe",
 
         "create": "clasp create",
         "login": "clasp login",

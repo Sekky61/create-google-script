@@ -6,7 +6,7 @@ export async function bundle() {
 }
 
 if (import.meta.main) {
-    console.log(`bundling...`);
+    console.log("bundling...");
     await bundle();
-    console.log(`bundled`);
+    console.log("bundled");
 }

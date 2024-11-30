@@ -27,12 +27,12 @@ function log(message: string) {
 
 (async () => {
     const description = process.argv[2] || "auto-deployed";
-    log(`bundling...`);
+    log("bundling...");
     await bundle();
-    log(`bundled`);
-    log(`pushing changes...`);
+    log("bundled");
+    log("pushing changes...");
     await pushCode();
-    log(`pushed changes`);
+    log("pushed changes");
     const version = await createVersion(description);
     log(`created version "${version}"`);
     log(`deploying version "${version}"...`);

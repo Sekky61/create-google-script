@@ -9,6 +9,7 @@ const sheet = {
         };
     }),
     getLastColumn: mock(() => 4),
+    // biome-ignore lint: just a test
 } as any as GoogleAppsScript.Spreadsheet.Sheet;
 
 test("2 + 2", () => {
