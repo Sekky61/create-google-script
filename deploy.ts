@@ -8,11 +8,12 @@ type Params = {
     clasp_json_path: string;
     clasp_cmd: string;
     description: string;
+    deploy: boolean;
 };
 
 function clasp(p: Params) {
     // Uses raw to avoid escaping
-    return { raw: `${p.clasp_cmd} -P ${p.clasp_json_path}`};
+    return { raw: `${p.clasp_cmd} -P ${p.clasp_json_path}` };
 }
 
 async function createVersion(p: Params) {
@@ -61,6 +62,9 @@ function log(message: unknown) {
             description: {
                 type: "string",
             },
+            "deploy-version": {
+                type: "boolean",
+            },
         },
         strict: true,
         allowPositionals: true,
@@ -68,10 +72,12 @@ function log(message: unknown) {
     const clasp_json_path = values["project-path"] ?? ".clasp.json";
     const clasp_cmd = values["clasp-cmd"] ?? "./node_modules/.bin/clasp";
     const description = values.description ?? "auto-deployed";
+    const deploy = values["deploy-version"] ?? false;
     const params: Params = {
         clasp_json_path,
         clasp_cmd,
         description,
+        deploy,
     };
     log(params);
 
@@ -81,9 +87,12 @@ function log(message: unknown) {
     log("pushing changes...");
     await pushCode(params);
     log("pushed changes");
-    const version = await createVersion(params);
-    log(`created version "${version}"`);
-    log(`deploying version "${version}"...`);
-    await deployVersion(params, version, description);
-    log(`deployed version "${version}"`);
+
+    if (deploy) {
+        const version = await createVersion(params);
+        log(`created version "${version}"`);
+        log(`deploying version "${version}"...`);
+        await deployVersion(params, version, description);
+        log(`deployed version "${version}"`);
+    }
 })();

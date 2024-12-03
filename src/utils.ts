@@ -1,3 +1,6 @@
+import "text-encoder";
+import QRCode from "qrcode";
+
 type Range = GoogleAppsScript.Spreadsheet.Range;
 
 /**
@@ -78,3 +81,8 @@ export function setLink(range: Range, url: string, label?: string) {
         .build();
     range.setRichTextValue(richValue);
 }
+
+export async function qrCodeSvg(text: string) {
+    return await QRCode.toString(text, { type: "svg" });
+}
+

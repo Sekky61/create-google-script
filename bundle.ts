@@ -3,6 +3,10 @@ export async function bundle() {
         entrypoints: ["./src/index.ts"],
         outdir: "./out",
         target: "browser",
+        define: {
+            // Lord forgive me
+            TextEncoder: "import_text_encoder.TextEncoder",
+        },
     });
     if (!res.success) {
         console.dir(res);

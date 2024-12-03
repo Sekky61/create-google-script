@@ -9,7 +9,6 @@
         "format": "biome format --write",
         "lint": "biome lint --write",
         "lint:unsafe": "biome lint --write --unsafe",
-
         "create": "clasp create",
         "login": "clasp login",
         "help": "clasp create --help",
@@ -33,6 +32,8 @@
         "typescript": "^5.0.0"
     },
     "dependencies": {
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "qrcode": "^1.5.4",
+        "text-encoder": "^0.0.4"
     }
 }
