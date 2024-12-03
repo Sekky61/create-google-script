@@ -14,6 +14,10 @@ export function convertRangeToObjects(
     return mapArrayToObjects(columnNames, data);
 }
 
+/**
+ * Convert objects from array form to object form.
+ * One item in data is one object represented as a row.
+ */
 export function mapArrayToObjects(
     columns: string[],
     data: unknown[][],

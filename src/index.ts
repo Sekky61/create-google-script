@@ -1,7 +1,8 @@
 // Example of using a library from npm
 import _ from "lodash";
+import * as utils from "./utils";
 
-export function readRow(
+function readRow(
     sheet: GoogleAppsScript.Spreadsheet.Sheet,
     rowNumber: number,
 ): string[] {
@@ -17,6 +18,7 @@ function main() {
 }
 
 // Call main here to not lose it after bundling
-if (import.meta.main) {
-    main();
-}
+const u = utils; // Mention utils so it isnt pruned
+const m = main;
+console.log(u);
+
