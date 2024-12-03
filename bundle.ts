@@ -1,12 +1,19 @@
 export async function bundle() {
-    await Bun.build({
+    const res = await Bun.build({
         entrypoints: ["./src/index.ts"],
         outdir: "./out",
+        target: "browser",
     });
+    if (!res.success) {
+        console.dir(res);
+    }
+    return res.success;
 }
 
 if (import.meta.main) {
     console.log("bundling...");
-    await bundle();
-    console.log("bundled");
+    const success = await bundle();
+    console.log(success ? "bundled" : "failed to bundle");
+    // Exit
+    process.exit(success ? 0 : 1);
 }
