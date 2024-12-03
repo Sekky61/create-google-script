@@ -8,6 +8,7 @@ It supports:
 - npm packages
 - Easy deployment with versions and bundling
 - lint with Biome
+- Tests in CI
 
 ## Get Started
 
